@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 let scene, camera, renderer, model;
 
 function init() {
@@ -22,7 +24,7 @@ function init() {
     scene.add(light);
 
     // Load Model
-    const loader = new THREE.GLTFLoader();
+    const loader = new GLTFLoader();
     loader.load('zen_stone.glb', function (gltf) {
         model = gltf.scene;
         scene.add(model);
